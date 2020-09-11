@@ -21,7 +21,7 @@ const generateHtml = () => {
 module.exports = (env, argv) => {
   return {
     entry: {
-      index: './src/js/index.js',
+      index: ['./src/js/index.js'],
     },
     output: {
       filename: 'boundle.js',
