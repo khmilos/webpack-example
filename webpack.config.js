@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const generateHtml = () => {
   const templatePath = path.resolve(__dirname, 'src/html/templates');
@@ -29,7 +30,10 @@ module.exports = (env, argv) => {
     },
     devtool: (argv.mode === 'development' ? 'inline-source-map' : false),
     optimization: {
-      minimizer: [new OptimizeCSSAssetsPlugin({})],
+      minimizer: [
+        new OptimizeCSSAssetsPlugin({}),
+        new TerserPlugin({}),
+      ],
     },
     plugins: [
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
