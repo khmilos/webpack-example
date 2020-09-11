@@ -10,9 +10,11 @@ const generateHtml = () => {
   const templatePath = path.resolve(__dirname, 'src/html/templates');
   const templateList = fs.readdirSync(templatePath);
   return templateList.map((template) => {
+    const fileName = template.split('.')[0];
     return new HtmlWebpackPlugin({
       filename: template,
       template: templatePath + `/${template}`,
+      chunks: [fileName, 'include'],
       minify: true,
     });
   });
@@ -21,10 +23,11 @@ const generateHtml = () => {
 module.exports = (env, argv) => {
   return {
     entry: {
-      index: ['./src/js/index.js'],
+      index: ['./src/js/index.js', './src/sass/index.sass'],
+      another: ['./src/js/another.js', './src/sass/another.sass'],
     },
     output: {
-      filename: 'boundle.js',
+      filename: '[name].boundle.js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
     },

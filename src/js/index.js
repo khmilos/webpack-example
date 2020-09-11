@@ -1,5 +1,5 @@
 // import '../css/index.css';
-import '../sass/index.sass';
+// import '../sass/index.sass';
 
 class A {
   constructor(a) {
