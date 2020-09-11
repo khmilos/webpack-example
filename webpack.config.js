@@ -51,10 +51,11 @@ module.exports = (env, argv) => {
           use: 'html-loader',
         },
         {
-          test: /\.css$/i,
+          test: /\.(css|sass|scss)$/i,
           use: [
-            MiniCssExtractPlugin.loader, 
-            'css-loader'
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader',
           ],
         },
         {
