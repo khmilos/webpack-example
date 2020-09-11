@@ -1,0 +1,18 @@
+@import 'another.css';
+
+body {
+  background: blue;
+}
+
+div {
+  background: green;
+}
+
+.block {
+  background: gray;
+}
+
+div {
+  width: 200px;
+  background: white;
+}
