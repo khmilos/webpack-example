@@ -71,6 +71,14 @@ module.exports = (env, argv) => {
             },
           },
         },
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'static',
+            name: '[name].[ext]',
+          },
+        },
       ],
     },
   };
