@@ -1,8 +1,21 @@
 import '../css/index.css';
 
+class A {
+  constructor(a) {
+    console.log(a)
+    this.a = a;
+  }
+
+  foo() {
+    console.log(1123123);
+  }
+}
+
 console.log('hello world');
 
 console.log('Another hello world');
+
+new A(100).foo()
 
 function foo() {
   let a = 100;
