@@ -22,8 +22,8 @@ const pageList = (() => {
 
 module.exports = (env, argv) => ({
   entry: {
-    index: ['./src/js/index.js', './src/sass/index.scss'],
-    another: ['./src/js/another.js', './src/sass/another.scss'],
+    index: ['./src/js/index.js', './src/scss/index.scss'],
+    another: ['./src/js/another.js', './src/scss/another.scss'],
   },
   output: {
     filename: '[name].boundle.js',
