@@ -1,6 +1,14 @@
-<%= _.template(require('../components/header.html'))({htmlWebpackPlugin}) %> 
-<main>
-  This is body
-  <img src="<%= require('../../img/index.png').default %>" />
-</main>
-<%= _.template(require('../components/footer.html'))() %> 
+<!DOCTYPE html>
+<html lang="en">
+  <%= _.template(require('../components/head.html'))({htmlWebpackPlugin}) %>
+  <body>
+    <%= _.template(require('../components/header.html'))() %>
+
+    <main>
+      This is body
+      <img src="<%= require('../../img/index.png').default %>" />
+    </main>
+
+    <%= _.template(require('../components/footer.html'))() %>
+  </body>
+</html>
