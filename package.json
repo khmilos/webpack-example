@@ -39,6 +39,8 @@
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
+    "stylelint": "^13.7.1",
+    "stylelint-config-standard": "^20.0.0",
     "terser-webpack-plugin": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
@@ -50,6 +52,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": "eslint --cache"
+    "src/**/*.js": "eslint --cache",
+    "src/**/*.{css,sass,scss}": "stylelint"
   }
 }
