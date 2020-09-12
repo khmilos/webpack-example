@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettylint src/**/*.{html,js}",
+    "prettier": "prettylint src/**/*.{html,js,css,md}",
+    "prettier-fix": "prettylint src/**/*.{html,js,css,md} --fix",
+    "eslint": "eslint src/**/*.js",
+    "eslint-fix": "eslint src/**/*.js --fix",
+    "fix": "eslint src/**/*.js --fix && prettylint src/**/*.{html,js,css,md}",
     "start": "webpack-dev-server --mode=development --open",
     "build": "webpack --mode=production"
   },
@@ -19,7 +23,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "eslint": "^7.8.1",
-    "eslint-config-standard": "^14.1.1",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -48,6 +52,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --check"
+    "src/**/*.js": "eslint --cache",
+    "src/**/*.{html,js,css,md}": "prettylint"
   }
 }
