@@ -71,6 +71,10 @@ module.exports = (env, argv) => ({
           name: '[name].[ext]',
         },
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: 'file-loader',
+      },
     ],
   },
 });
