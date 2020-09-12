@@ -24,7 +24,7 @@ function foo() {
     (() => {
       console.log(11);
       return 0;
-    })(),
+    })()
   );
 }
 
