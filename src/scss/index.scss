@@ -1,0 +1,13 @@
+body {
+  background: green url('../img/index.png');
+}
+
+div {
+  background: gray;
+}
+
+.block {
+  display: flex;
+}
+
+@import 'module.sass';
