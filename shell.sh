@@ -37,7 +37,7 @@ mkdir src/static;
 
 # NPM
 npm init -y;
-npm install --save-dev webpack webpack-cli webpack-dev-server 
+npm install --save-dev webpack webpack-cli webpack-dev-server;
 npm install --save-dev babel-loader @babel/preset-env @babel/core terser-webpack-plugin;
 npm install --save-dev html-loader html-webpack-plugin clean-webpack-plugin;
 npm install --save-dev css-loader sass sass-loader style-loader mini-css-extract-plugin optimize-css-assets-webpack-plugin;
